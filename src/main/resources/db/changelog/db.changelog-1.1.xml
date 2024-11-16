@@ -54,4 +54,3 @@
         <dropColumn tableName="content" columnName="category"/>
     </changeSet>
 </databaseChangeLog>
-
