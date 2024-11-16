@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0.39
+    container_name: liquibase-test-db
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: content
+      TZ: Asia/Seoul
+    volumes:
+      - ./data:/var/lib/mysql
+    platform: linux/x86_64
