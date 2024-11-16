@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-after.xml
+    user: root
+    password: root
+    show-summary-output: log
+    ui-service: logger

@@ -1,11 +1,11 @@
 version: '3'
 services:
   db:
-    image: mysql:8.0.39
     container_name: liquibase-test-db
+    image: mysql:8.0.39
     restart: always
     ports:
-      - 3307:3306
+      - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: content
