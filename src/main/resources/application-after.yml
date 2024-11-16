@@ -1,6 +1,6 @@
 spring:
   liquibase:
-    change-log: classpath:/db/changelog/db.changelog-after.xml
+    change-log: classpath:/db/changelog/v2/db.changelog.xml
     user: root
     password: root
     show-summary-output: log
