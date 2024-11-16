@@ -16,10 +16,10 @@ public enum BeforeCategory {
     ;
 
     private static final List<BeforeCategory> CATEGORIES = Arrays.stream(BeforeCategory.values()).toList();
-    private final String value;
+    private final String displayName;
 
-    BeforeCategory(String value) {
-        this.value = value;
+    BeforeCategory(String displayName) {
+        this.displayName = displayName;
     }
 
     public static List<BeforeCategory> getCategories() {

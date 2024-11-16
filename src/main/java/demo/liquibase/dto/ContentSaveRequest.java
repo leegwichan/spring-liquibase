@@ -1,5 +1,6 @@
 package demo.liquibase.dto;
 
-public record ContentSaveRequest(String name, String categoryLabel) {
+import demo.liquibase.v2.AfterContent;
 
+public record ContentSaveRequest(String name, String categoryLabel) {
 }

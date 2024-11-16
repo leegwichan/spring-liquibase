@@ -13,18 +13,26 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AfterContentsService implements ContentsService {
 
+    private final AfterCategoryRepository categoryRepository;
+    private final AfterContentRepository contentRepository;
+
     @Override
     public CategoriesResponse getCategories() {
-        return null;
+        return CategoriesResponse.from(categoryRepository.findAll());
     }
 
     @Override
     public ContentResponse getContent(Long id) {
-        return null;
+        AfterContent content = contentRepository.findById(id)
+                .orElseThrow();
+        return ContentResponse.from(content);
     }
 
     @Override
     public ContentResponse saveContent(ContentSaveRequest request) {
-        return null;
+        AfterCategory category = categoryRepository.findByLabel(request.categoryLabel())
+                .orElseThrow();
+        AfterContent content = contentRepository.save(new AfterContent(category, request.name()));
+        return ContentResponse.from(content);
     }
 }

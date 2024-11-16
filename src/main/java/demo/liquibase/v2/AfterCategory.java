@@ -23,9 +23,12 @@ public class AfterCategory {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String label;
 
-    public AfterCategory(String name) {
-        this.name = name;
+    @Column(nullable = false)
+    private String displayName;
+
+    public AfterCategory(String displayName) {
+        this.displayName = displayName;
     }
 }
