@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("before")
+@Profile({"before", "rollback"})
 @Service
 @RequiredArgsConstructor
 public class BeforeContentsService implements ContentsService {

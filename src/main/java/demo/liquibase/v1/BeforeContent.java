@@ -13,7 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Profile;
 
-@Profile("before")
+@Profile({"before", "rollback"})
 @Entity
 @Table(name = "content")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

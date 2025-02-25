@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("before")
+@Profile({"before", "rollback"})
 @EntityScan(basePackages = "demo.liquibase.v1")
 public class BeforeApplicationConfig {
 }

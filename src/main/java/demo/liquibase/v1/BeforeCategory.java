@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Getter;
 import org.springframework.context.annotation.Profile;
 
-@Profile("before")
+@Profile({"before", "rollback"})
 @Getter
 public enum BeforeCategory {
 
